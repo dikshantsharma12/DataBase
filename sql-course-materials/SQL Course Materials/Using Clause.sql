@@ -4,7 +4,7 @@ select
     sh. name as shipper
 from orders o
 join customers c
-	using (customer_id) -- Eleminate the use of ON clause which syntax is longer to write but  when cloumn name is different type both columns name as arguments in using clause  
+	using (customer_id) -- Eleminate the use of ON clause which syntax is longer to write 
 left join shippers sh
 	using (shipper_id);
     
