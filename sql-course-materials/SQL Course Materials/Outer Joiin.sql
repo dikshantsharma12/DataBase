@@ -34,4 +34,14 @@ LEFT JOIN  customers c
 	ON o.customer_id = c.customer_id
 LEFT JOIN order_statuses os
 	ON  o.status=os.order_status_id
-ORDER BY os.name 
+ORDER BY os.name ;
+
+
+-- SELF  OUTER JOIN --
+SELECT 
+	e.employee_id,
+    e.first_name,
+    m.first_name as manager
+FROM employees e
+LEFT JOIN employees m
+	on e.reports_to = m.employee_id
